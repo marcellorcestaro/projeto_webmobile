@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { RendaModule } from './renda/renda.module';
 
 @Module({
   imports: [UsersModule,
@@ -12,6 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    RendaModule,
   ],
   controllers: [AppController],
   providers: [AppService],

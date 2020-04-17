@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Renda } from 'src/renda/renda.entity';
 
 @Entity()
 export class User {
@@ -24,4 +25,6 @@ export class User {
     })
     saldoAtual;
 
+    @OneToMany(type => Renda, renda => renda.user)
+    rendas: Renda[];
 }
