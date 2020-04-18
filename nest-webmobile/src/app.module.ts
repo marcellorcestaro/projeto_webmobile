@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RendaModule } from './renda/renda.module';
+import { DespesaVariavelModule } from './despesa-variavel/despesa-variavel.module';
 
 @Module({
   imports: [UsersModule,
@@ -14,6 +15,7 @@ import { RendaModule } from './renda/renda.module';
       synchronize: true,
     }),
     RendaModule,
+    DespesaVariavelModule,
   ],
   controllers: [AppController],
   providers: [AppService],
