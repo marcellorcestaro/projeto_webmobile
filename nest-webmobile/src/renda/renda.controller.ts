@@ -1,6 +1,7 @@
 import { Controller, Get, Param, Post, Body, Put, Delete } from '@nestjs/common';
 import { RendaService } from './renda.service';
 import { Renda } from './renda.entity';
+import { UpdateResult, DeleteResult } from 'typeorm';
 
 @Controller('renda')
 export class RendaController {
@@ -24,13 +25,13 @@ export class RendaController {
     }
 
     @Put(':id')
-    async update(@Param('id') id, @Body() rendaData: Renda): Promise<any> {
+    async update(@Param('id') id, @Body() rendaData: Renda): Promise<UpdateResult> {
         rendaData.id = id;
         return await this.rendaService.update(rendaData);
     }
 
     @Delete(':id')
-    async delete(@Param('id') id): Promise<any> {
+    async delete(@Param('id') id): Promise<DeleteResult> {
         return await this.rendaService.delete(id);
     }
 }

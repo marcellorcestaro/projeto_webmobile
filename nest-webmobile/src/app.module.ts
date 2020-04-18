@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { RendaModule } from './renda/renda.module';
 import { DespesaVariavelModule } from './despesa-variavel/despesa-variavel.module';
 import { DespesaAdicionalModule } from './despesa-adicional/despesa-adicional.module';
+import { ReservaModule } from './reserva/reserva.module';
 
 @Module({
   imports: [UsersModule,
@@ -18,6 +19,7 @@ import { DespesaAdicionalModule } from './despesa-adicional/despesa-adicional.mo
     RendaModule,
     DespesaVariavelModule,
     DespesaAdicionalModule,
+    ReservaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
