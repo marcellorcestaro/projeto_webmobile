@@ -30,3 +30,4 @@ export class DespesaVariavelService {
         return await this.despesaVarRepository.delete(receivedId);
     }
 }
+ 

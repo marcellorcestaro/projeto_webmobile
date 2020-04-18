@@ -5,6 +5,7 @@ import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RendaModule } from './renda/renda.module';
 import { DespesaVariavelModule } from './despesa-variavel/despesa-variavel.module';
+import { DespesaAdicionalModule } from './despesa-adicional/despesa-adicional.module';
 
 @Module({
   imports: [UsersModule,
@@ -16,8 +17,10 @@ import { DespesaVariavelModule } from './despesa-variavel/despesa-variavel.modul
     }),
     RendaModule,
     DespesaVariavelModule,
+    DespesaAdicionalModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
+ 

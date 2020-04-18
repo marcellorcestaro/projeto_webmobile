@@ -2,11 +2,11 @@ import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import { User } from 'src/users/user.entity';
 
 @Entity()
-export class DespesaVariavel {
+export class DespesaAdicional {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @ManyToOne(type => User, user => user.despesasAdd)
+    @ManyToOne(type => User, user => user.despesasVar)
     user: User;
 
     @Column()
@@ -24,7 +24,7 @@ export class DespesaVariavel {
     @Column("float")
     valor;
  
-    @Column()
+    @Column({default: true})
     pago: boolean;
 
     @Column("float")

@@ -1,6 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Renda } from 'src/renda/renda.entity';
 import { DespesaVariavel } from 'src/despesa-variavel/despesa-variavel.entity'
+import { DespesaAdicional } from 'src/despesa-adicional/despesa-adicional.entity';
 
 @Entity()
 export class User {
@@ -31,4 +32,7 @@ export class User {
     
     @OneToMany(type => DespesaVariavel, despesasVar => despesasVar.user)
     despesasVar: DespesaVariavel[]; 
+
+    @OneToMany(type => DespesaAdicional, despesasAdd => despesasAdd.user)
+    despesasAdd: DespesaAdicional[]; 
 }

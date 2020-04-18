@@ -12,3 +12,4 @@ import { DespesaVariavel } from './despesa-variavel.entity';
   providers: [DespesaVariavelService]
 })
 export class DespesaVariavelModule {}
+ 
