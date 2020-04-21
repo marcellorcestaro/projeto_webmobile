@@ -3,6 +3,7 @@ import { Renda } from 'src/renda/renda.entity';
 import { DespesaVariavel } from 'src/despesa-variavel/despesa-variavel.entity'
 import { DespesaAdicional } from 'src/despesa-adicional/despesa-adicional.entity';
 import { Reserva } from 'src/reserva/reserva.entity';
+import { DespesaFixa } from 'src/despesa-fixa/despesa-fixa.entity';
 
 @Entity()
 export class User {
@@ -30,6 +31,9 @@ export class User {
 
     @OneToMany(type => Renda, renda => renda.user)
     rendas: Renda[];
+
+    @OneToMany(type => DespesaFixa, despesasFix => despesasFix.user)
+    despesasFix: DespesaFixa[];
     
     @OneToMany(type => DespesaVariavel, despesasVar => despesasVar.user)
     despesasVar: DespesaVariavel[]; 

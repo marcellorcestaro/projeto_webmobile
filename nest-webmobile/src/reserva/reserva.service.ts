@@ -19,7 +19,7 @@ export class ReservaService {
     }
     
     async create(reservaData: Reserva): Promise<Reserva>{
-        return await this.reservaRepository.create(reservaData);
+        return await this.reservaRepository.save(reservaData);
     }
 
     async update(reservaData: Reserva): Promise<UpdateResult>{

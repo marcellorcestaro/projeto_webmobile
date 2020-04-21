@@ -7,6 +7,7 @@ import { RendaModule } from './renda/renda.module';
 import { DespesaVariavelModule } from './despesa-variavel/despesa-variavel.module';
 import { DespesaAdicionalModule } from './despesa-adicional/despesa-adicional.module';
 import { ReservaModule } from './reserva/reserva.module';
+import { DespesaFixaModule } from './despesa-fixa/despesa-fixa.module';
 
 @Module({
   imports: [UsersModule,
@@ -20,6 +21,7 @@ import { ReservaModule } from './reserva/reserva.module';
     DespesaVariavelModule,
     DespesaAdicionalModule,
     ReservaModule,
+    DespesaFixaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
